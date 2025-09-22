@@ -39,25 +39,38 @@ body{
 .btn.primary{background:#11131a;color:#fff;border-color:#11131a}
 
 /* ===== HERO ===== */
-.hero{padding:56px 0 16px}
-.hero-card{
-  position:relative;overflow:hidden;border-radius:26px;padding:28px 28px 82px;
-  background:
-    radial-gradient(180px 60px at 14% 8%, #fff 0%, #F1F4F8 100%),
-    radial-gradient(220px 80px at 72% 18%, #F7F9FC 0%, #ECF1F6 100%),
-    linear-gradient(180deg,#f8fafc,#eef2f7);
-  border:1px solid var(--ring);
-  box-shadow:var(--shadow);
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 0 0 24px 24px;
 }
 
-/* Добавляем фон-картинку */
-.hero-bg{
-  position:absolute;
-  top:0;left:0;width:100%;height:100%;
-  object-fit:cover;
-  z-index:0;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("assets/hero-desktop.png") no-repeat center center;
+  background-size: cover;
+  z-index: 0;
+  filter: brightness(0.7);
 }
-.hero-card > *{position:relative;z-index:1}
+
+.hero-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  max-width: 720px;
+  width: 100%;
+}
 
 .hero-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
 .hero-badges .badge{
@@ -81,13 +94,17 @@ body{
 }
 
 .cta{
-  position:absolute;right:28px;bottom:24px;
-  display:inline-flex;align-items:center;justify-content:center;
-  height:50px;padding:0 22px;border-radius:999px;
-  background:linear-gradient(180deg,#1f2430,#0f121a);color:#fff;text-decoration:none;font-weight:800;
-  box-shadow:0 14px 28px rgba(15,18,26,.28), 0 2px 4px rgba(15,18,26,.18);
-  z-index:2;
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background: #111;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s ease;
 }
+.cta:hover {background: #333}
 
 /* ===== WHAT (cards) ===== */
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
@@ -145,7 +162,6 @@ body{
 @media (max-width: 720px){
   .h2{font-size:32px}
   .features{grid-template-columns:1fr}
-  .hero-card{padding:22px 22px 92px}
-  .cta{right:22px;bottom:22px}
+  .hero-card{padding:22px}
   .aud-item{align-items:flex-start}
 }
