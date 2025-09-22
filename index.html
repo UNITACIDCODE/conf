@@ -4,26 +4,35 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>UrbanAds — конференция</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="hero container">
+    <div class="hero-card">
+      <!-- Фон-картинка -->
+      <img src="assets/hero-desktop.png" alt="UrbanAds фон" class="hero-bg">
 
-  <!-- HERO с картинкой-фоном и кнопкой поверх -->
-  <header class="hero">
-    <div class="hero-rel">
-      <figure class="hero-wrap">
-        <img src="assets/hero-desktop.png" alt="UrbanAds — всё в одном ключе" class="hero-img" />
-      </figure>
-
-      <!-- Белая плашка с текстом и кнопкой как в макете -->
-      <div class="hero-box">
-        <p class="hero-sub">Всё в одном ключе</p>
-        <a class="btn-main" id="cta-register" href="#">Зарегистрироваться</a>
+      <div class="hero-top">
+        <div class="hero-badges">
+          <span class="badge">GO</span><span class="badge">M</span><span class="badge">O</span><span class="badge">♥</span>
+        </div>
+        <div class="brand"><span class="brand-mark">Я</span><span class="brand-mark up">Л</span><span class="brand-name">UrbanAds</span></div>
       </div>
+
+      <div class="hero-meta">
+        <span class="chip">18:00</span>
+        <span class="chip">в октябре</span>
+        <span class="chip">Москва</span>
+      </div>
+
+      <a class="cta" id="cta-register" href="#">
+        <span>Зарегистрироваться</span>
+      </a>
     </div>
   </header>
 
-  <!-- Блок «Что будет» -->
   <main>
     <section class="container section">
       <h2 class="h2">Что будет:</h2>
@@ -43,12 +52,12 @@
       </div>
 
       <p class="subtitle center">Идеальное место, чтобы обменяться кейсами, идеями и контактами.</p>
+
       <div class="center">
         <a class="btn ghost" id="cta-participate" href="#">Хочу участвовать</a>
       </div>
     </section>
 
-    <!-- Блок «Для кого конференция» -->
     <section class="container section">
       <h2 class="h2">Для кого конференция</h2>
       <ul class="audience">
@@ -83,7 +92,6 @@
       </ul>
     </section>
 
-    <!-- Программа (тёмный блок) -->
     <section class="program">
       <div class="container">
         <div class="prog-card">
@@ -93,7 +101,6 @@
       </div>
     </section>
 
-    <!-- FAQ -->
     <section class="container section">
       <h2 class="h2">Вопросы и ответы</h2>
       <div class="faq">
@@ -112,7 +119,6 @@
       </div>
     </section>
 
-    <!-- Финальный CTA -->
     <section class="container section center">
       <h2 class="h2">Регистрируйтесь!</h2>
       <p class="subtitle">Места ограничены — зарегистрируйтесь сейчас</p>
