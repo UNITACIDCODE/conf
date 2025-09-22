@@ -138,3 +138,63 @@ body{
   .cta{right:22px;bottom:22px}
   .aud-item{align-items:flex-start}
 }
+
+/* ===== HERO image + overlay button ===== */
+.hero{padding:32px 0 16px}
+.hero-rel{position:relative;max-width:1120px;margin:0 auto}
+.hero-wrap{
+  margin:0;border-radius:24px;overflow:hidden;
+  border:1px solid var(--ring);box-shadow:var(--shadow)
+}
+.hero-img{display:block;width:100%;height:auto}
+
+/* Белая плашка "Всё в одном ключе" + кнопка */
+.hero-box{
+  position:absolute;
+  right:8.5%;          /* подгонка по макету */
+  top:52%;
+  transform:translateY(-28%);
+  display:inline-flex;flex-direction:column;align-items:center;
+  gap:10px;
+  background:#fff;
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:20px;
+  padding:16px 18px;
+  box-shadow:
+    0 14px 28px rgba(15,18,26,.18),
+    0 2px 4px rgba(15,18,26,.12);
+}
+
+.hero-sub{
+  font-family:"YS Text", Inter, system-ui, sans-serif;
+  font-weight:700;
+  font-size:20px;
+  color:#0f1220;
+  margin:0;
+}
+
+/* Кнопка в плашке */
+.btn-main{
+  display:inline-flex;align-items:center;justify-content:center;
+  height:42px;padding:0 20px;border-radius:12px;
+  background:linear-gradient(180deg,#1f2430,#0f121a);
+  color:#fff;text-decoration:none;font-weight:700;font-size:15px;
+  box-shadow:0 10px 20px rgba(16,20,28,.25);
+  transition:transform .15s ease, opacity .15s ease;
+}
+.btn-main:hover{transform:translateY(-1px);opacity:.95}
+
+/* Адаптив под планшет/мобилу */
+@media (max-width: 960px){
+  .hero-box{right:6%; top:52%; transform:translateY(-24%)}
+}
+@media (max-width: 720px){
+  .hero-rel{max-width:100%}
+  .hero-wrap{border-radius:16px}
+  .hero-box{
+    right:50%; top:auto; bottom:16px; transform:translateX(50%);
+    gap:8px; padding:12px 14px; border-radius:14px
+  }
+  .hero-sub{font-size:16px}
+  .btn-main{height:40px;padding:0 16px;font-size:14px}
+}
